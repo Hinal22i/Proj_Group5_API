@@ -26,12 +26,12 @@ const Category = () => {
         console.log("hi");
     };
     return (
-        <ThemeProvider theme={theme} sx={{ marginTop: '2rem' }}>
+        <ThemeProvider theme={theme} sx={{ marginTop: '2rem'  }}>
            
             <Box sx={{ flexGrow: 1, marginTop: '4rem' }}>
-                <AppBar position="static" sx={{ backgroundColor: '#eebaeb' }} >
+                <AppBar position="static" sx={{ backgroundColor: '#92b8ff' }} >
                     <div>
-                        <div style={{ textAlign: "center", marginTop: "1rem" }}>
+                        <div style={{ textAlign: "center", marginTop: "1rem", fontWeight:'bolder' }}>
                             <Chip
                                 color="secondary"
                                 size="small"

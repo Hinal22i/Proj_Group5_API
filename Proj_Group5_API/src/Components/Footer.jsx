@@ -1,15 +1,16 @@
 
+
 const Footer = () => {
     return (
         <div className="footer">
-            <div>
+            <div className="part1" id="parts">
                 <h2>Open Library</h2>
                 <p>Partner with Us</p>
                 <p>Career</p>
                 <p>Blog</p>
                 <p>Terms of Service</p>
             </div>
-            <div>
+            <div className="part2" id="parts">
                 <h2>Discover</h2>
                 <p>Home</p>
                 <p>Books</p>
@@ -18,14 +19,14 @@ const Footer = () => {
                 <p>Collections</p>
                 <p>Advance Search</p>
             </div>
-            <div>
+            <div className="part3" id="parts">
                 <h2>Develop</h2>
                 <p>Developer Center</p>
                 <p>API Documentation</p>
                 <p>Bulk Data Dumps</p>
                 <p>Writing Bots</p>
             </div>
-            <div>
+            <div className="part4" id="parts">
                 <h2>Help</h2>
                 <p>Help Center</p>
                 <p>Report A Problem</p>
@@ -33,8 +34,8 @@ const Footer = () => {
                 <p>Add a Book</p>
                 <p>Release Notes</p>
             </div>
-            <div>
-                <h2>Change Website Language</h2>
+            <div className="part5" id="parts">
+                <h2>Available Language</h2>
                 <p>Čeština (cs)</p>
                 <p>Deutsch (de)</p>
                 <p>English (en)</p>

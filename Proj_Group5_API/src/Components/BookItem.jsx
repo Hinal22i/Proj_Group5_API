@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import BookDetail from "./BookDetail.jsx";
 
 const BookItem = () => {
-  const bookID = "7n6j5Hplu38L1tlZDVGoMo"; //useParams();
+  const bookID = useParams();
   const [bookData, setBookData] = useState(null);
   const [coverImage, setCoverImage] = useState(null);
   const [loading, setLoading] = useState(true);

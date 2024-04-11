@@ -1,7 +1,41 @@
+* {
+    font-family: sans-serif;
+}
 body {
-    background-color:#eebaeb;
+    background-color: #eebaeb;
 }
 
 .footer {
     background-color: antiquewhite;
+}
+.bookshelf {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #bb4515;
+    border-radius: 10px;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.book img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.book-title {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
 }

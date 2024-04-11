@@ -3,15 +3,17 @@ import MainContent from "./Components/MainContent";
 import Category from "./Components/Category";
 import Footer from "./Components/Footer";
 import BookItem from "./Components/BookItem";
+import BookShelf from "./Components/Bookshelf.jsx";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <BookItem />
+      {/* <Navbar /> */}
+      {/* <BookItem /> */}
       {/*   <Category /> */}
       {/*   <MainContent /> */}
       {/*   <Footer /> */}
+      <BookShelf />
     </>
   );
 }

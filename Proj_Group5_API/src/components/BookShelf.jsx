@@ -66,7 +66,7 @@ const BookShelf = () => {
           key={book.fields.id}
           title={book.fields.title}
           imageUrl={imageArray[index]}
-          descriptionLink={book.fields.description}
+          descriptionLink={book.sys.id}
         />
       ))}
     </div>

@@ -53,14 +53,31 @@ const BookItem = () => {
 
   // if we got some data:
   return (
-    <div style={{ width: "100%", overflowX: "hidden" }}>
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        marginTop: "10%",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        overflowX: "hidden",
+      }}
+    >
       <div
         id="image-wrapper"
         style={{
-          width: "100%",
+          width: "70%",
+          height: "100%",
           backgroundColor: "LightBlue",
+          margin: "5rem",
+          marginLeft: "8rem",
+          borderRadius: "2rem",
           padding: "2rem",
+          paddingRight: "1rem",
           paddingTop: "8rem",
+          paddingBottom: "8rem",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -68,8 +85,8 @@ const BookItem = () => {
       >
         <img
           style={{
-            width: "30%",
-            maxWidth: "350px",
+            width: "100%",
+            maxWidth: "450px",
             boxShadow:
               "rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.29) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px",
           }}
@@ -85,11 +102,19 @@ const BookItem = () => {
           width: "100%",
         }}
       >
-        <div id="info-wrapper" style={{ maxWidth: "1024px", padding: "2rem" }}>
-          <h1>{bookData.fields.title}</h1>
+        <div
+          id="info-wrapper"
+          style={{
+            maxWidth: "1024px",
+            paddingRight: "8rem",
+          }}
+        >
+          <h1 style={{ fontSize: "3rem" }}>{bookData.fields.title}</h1>
           <h2>{bookData.fields.subtitle}</h2>
-          <h3>Description</h3>
-          <p>{bookData.fields.description}</p>
+          <h3 style={{ fontSize: "1.7rem" }}>Description</h3>
+          <p style={{ fontSize: "1.3rem", lineHeight: "1.9rem" }}>
+            {bookData.fields.description}
+          </p>
           <BookDetail
             labelField="authors"
             valueField={bookData.fields.authors}
@@ -107,7 +132,6 @@ const BookItem = () => {
               justifyContent: "center",
               alignItems: "center",
               padding: "3rem",
-              paddingLeft: "1rem",
             }}
           >
             <a className="book-link-negative" href={bookData.fields.url}>

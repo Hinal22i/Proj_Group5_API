@@ -7,7 +7,7 @@ const BookDetail = ({ labelField, valueField }) => {
         display: "flex",
         justifyContent: "start",
         alignItems: "center",
-        height: "2rem",
+        height: "2.2rem",
       }}
     >
       <p
@@ -15,11 +15,12 @@ const BookDetail = ({ labelField, valueField }) => {
           fontWeight: "bold",
           textTransform: "capitalize",
           paddingRight: "1rem",
+          fontSize: "1.3rem",
         }}
       >
         {labelField}
       </p>
-      <p>{valueField}</p>
+      <p style={{ fontSize: "1.3rem" }}>{valueField}</p>
     </div>
   );
 };

@@ -69,7 +69,7 @@ function Navbar(props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item}  sx={{ color: '#fff' }}>
                 {item}
               </Button>
             ))}

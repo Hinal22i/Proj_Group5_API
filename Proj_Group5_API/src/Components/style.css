@@ -1,10 +1,10 @@
 body {
     background: url(https://wallpaperboat.com/wp-content/uploads/2020/12/02/62556/light-color-12.jpg);
-    
+    background-size: cover;
 }
 
 .footer {
-    background-color: rgb(201, 201, 201);
+    background-color: #92b8ff;
     display: flex;
     padding: 2rem;
     justify-content: space-around;

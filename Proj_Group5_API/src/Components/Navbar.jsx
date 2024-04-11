@@ -16,7 +16,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Home', 'Blog', 'About', 'Contact', 'Login'];
 
 function Navbar(props) {
   const { window } = props;
@@ -69,7 +69,7 @@ function Navbar(props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item}  sx={{ color: '#fff' }}>
                 {item}
               </Button>
             ))}

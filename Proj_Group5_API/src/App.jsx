@@ -5,17 +5,17 @@ import Footer from "./Components/Footer";
 import BookItem from "./Components/BookItem";
 
 function App() {
+
   return (
     <>
       <Navbar />
-      <BookItem />
-      {/*   <Category /> */}
-      {/*   <MainContent /> */}
-      {/*   <Footer /> */}
+      <Category />
+      <MainContent />
+      <Footer />
+
     </>
   );
 }
 
-export default App;
-// npm install @mui/icons-material
-// npm install @mui/material @mui/styled-engine-sc styled-components
+export default App
+

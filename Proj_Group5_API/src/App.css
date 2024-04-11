@@ -1,0 +1,39 @@
+
+/*styling bookshelf*/
+.BookShelf {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  background-color: rgb(203, 234, 244); 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow inside shelf */
+}
+
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 2rem;
+  border-radius: 5px;
+  margin: 10px; 
+}
+
+.book img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow of the book */
+}
+
+.book-title {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}

@@ -11,10 +11,19 @@ function App() {
       <Category />
       <MainContent />
       <Footer />
+
+import { useState } from 'react'
+
+
+function App() {
+  
+
+  return (
+    <>
+      
+
     </>
   )
 }
 
 export default App
-// npm install @mui/icons-material
-// npm install @mui/material @mui/styled-engine-sc styled-components

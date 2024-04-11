@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import BookDetail from "./BookDetail.jsx";
 
 const BookItem = () => {
-  const bookID = useParams();
+  const bookID = "7n6j5Hplu38L1tlZDVGoMo"; //useParams();
   const [bookData, setBookData] = useState(null);
   const [coverImage, setCoverImage] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -53,7 +53,7 @@ const BookItem = () => {
 
   // if we got some data:
   return (
-    <div style={({ display: "flex" }, { width: "100%" })}>
+    <div style={{ width: "100%", overflowX: "hidden" }}>
       <div
         id="image-wrapper"
         style={{
@@ -107,28 +107,12 @@ const BookItem = () => {
               justifyContent: "center",
               alignItems: "center",
               padding: "3rem",
+              paddingLeft: "1rem",
             }}
           >
-            <button
-              style={{
-                padding: "1rem",
-                borderRadius: "2rem",
-                backgroundColor: "cornflowerBlue",
-                border: "none",
-                color: "white",
-              }}
-            >
-              <a
-                href={bookData.fields.url}
-                style={{
-                  color: "white",
-                  fontWeight: "bold",
-                  textDecoration: "none",
-                }}
-              >
-                Get the Book
-              </a>
-            </button>
+            <a className="book-link-negative" href={bookData.fields.url}>
+              Get the Book
+            </a>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
 // import MainContent from "./Components/MainContent";
 // import Category from "./Components/Category";
 // import Footer from "./Components/Footer";
-// import BookItem from "./Components/BookItem";
+import BookItem from "./Components/BookItem";
 import BookShelf from "./components/BookShelf";
 import "./App.css";
 
@@ -13,8 +13,8 @@ function App() {
       {/* <Category /> */}
       {/* <MainContent /> */}
       {/* <Footer /> */}
-      {/* <BookItem /> */}
-      <BookShelf />
+      <BookItem />
+      {/* <BookShelf /> */}
     </>
   );
 }

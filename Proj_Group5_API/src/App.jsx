@@ -1,16 +1,23 @@
-import {useState } from 'react'; 
+import Navbar from "./Components/Navbar";
+import MainContent from "./Components/MainContent";
+import Category from "./Components/Category";
+import Footer from "./Components/Footer";
+import BookItem from "./Components/BookItem";
 import BookShelf from './components/BookShelf';
 import './App.css'
 
 function App() {
-  
+
   return (
-    <div className='App'>
-      <h1>Our Book Library</h1>
+    <>
+      <Navbar />
+      <Category />
+      <MainContent />
+      <Footer />
+       
       <BookShelf />
-      
-    </div>
-  )
+    </>
+  );
 }
 
-export default App;
+export default App

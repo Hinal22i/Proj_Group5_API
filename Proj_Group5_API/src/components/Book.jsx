@@ -5,7 +5,9 @@ const Book = ({ title, imageUrl, descriptionLink }) => {
     <div className="book">
       <img src={imageUrl} alt={imageUrl} />
       <div className="book-title">{title}</div>
-      <a href={descriptionLink}>Learn More</a>
+      <a className="book-link" href={descriptionLink}>
+        Learn More
+      </a>
     </div>
   );
 };

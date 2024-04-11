@@ -77,47 +77,59 @@ const BookItem = () => {
           alt={bookData.fields.title}
         />
       </div>
-      <div id="info-wrapper" style={{ padding: "2rem" }}>
-        <h1>{bookData.fields.title}</h1>
-        <h2>{bookData.fields.subtitle}</h2>
-        <h3>Description</h3>
-        <p>{bookData.fields.description}</p>
-        <BookDetail labelField="authors" valueField={bookData.fields.authors} />
-        <BookDetail
-          labelField="publisher"
-          valueField={bookData.fields.publisher}
-        />
-        <BookDetail labelField="pages" valueField={bookData.fields.pages} />
-        <BookDetail labelField="year" valueField={bookData.fields.year} />
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            padding: "3rem",
-          }}
-        >
-          <button
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+        }}
+      >
+        <div id="info-wrapper" style={{ maxWidth: "1024px", padding: "2rem" }}>
+          <h1>{bookData.fields.title}</h1>
+          <h2>{bookData.fields.subtitle}</h2>
+          <h3>Description</h3>
+          <p>{bookData.fields.description}</p>
+          <BookDetail
+            labelField="authors"
+            valueField={bookData.fields.authors}
+          />
+          <BookDetail
+            labelField="publisher"
+            valueField={bookData.fields.publisher}
+          />
+          <BookDetail labelField="pages" valueField={bookData.fields.pages} />
+          <BookDetail labelField="year" valueField={bookData.fields.year} />
+          <div
             style={{
-              padding: "1rem",
-              borderRadius: "2rem",
-              backgroundColor: "cornflowerBlue",
-              border: "none",
-              color: "white",
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "3rem",
             }}
           >
-            <a
-              href={bookData.fields.url}
+            <button
               style={{
+                padding: "1rem",
+                borderRadius: "2rem",
+                backgroundColor: "cornflowerBlue",
+                border: "none",
                 color: "white",
-                fontWeight: "bold",
-                textDecoration: "none",
               }}
             >
-              Get the Book
-            </a>
-          </button>
+              <a
+                href={bookData.fields.url}
+                style={{
+                  color: "white",
+                  fontWeight: "bold",
+                  textDecoration: "none",
+                }}
+              >
+                Get the Book
+              </a>
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import Book from "./Book";
+
 let imageArray = [];
 
 const BookShelf = () => {
   const bookID = "7n6j5Hplu38L1tlZDVGoMo";
   const [bookData, setBookData] = useState(null);
-  const [coverImage, setCoverImage] = useState(null);
+  // const [coverImage, setCoverImage] = useState(null);
   const [loading, setLoading] = useState(true);
   let result;
 
-  const getBookData = async (bookID) => {
+  const getBookData = async () => {
     try {
       let SPACE_ID = "tckbs3t41kd5";
       let ACCESS_TOKEN = "5YKbClc0mVuVulCYhjocUmsVQzg2av5fApTUsYtbw7I";

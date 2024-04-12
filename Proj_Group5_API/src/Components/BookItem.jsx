@@ -1,9 +1,9 @@
-import { React, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import BookDetail from "./BookDetail.jsx";
 
 const BookItem = () => {
-  const bookID = "7n6j5Hplu38L1tlZDVGoMo"; //useParams();
+  const { bookID } = useParams();
   const [bookData, setBookData] = useState(null);
   const [coverImage, setCoverImage] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -58,7 +58,7 @@ const BookItem = () => {
         width: "100%",
         height: "100%",
         display: "flex",
-        marginTop: "10%",
+        marginTop: "5%",
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
@@ -70,7 +70,7 @@ const BookItem = () => {
         style={{
           width: "70%",
           height: "100%",
-          backgroundColor: "LightBlue",
+          backgroundColor: "#a4cdf988 ",
           margin: "5rem",
           marginLeft: "8rem",
           borderRadius: "2rem",
@@ -116,15 +116,15 @@ const BookItem = () => {
             {bookData.fields.description}
           </p>
           <BookDetail
-            labelField="authors"
-            valueField={bookData.fields.authors}
+            labelField="authors:"
+            valueField={bookData.fields.authors} 
           />
           <BookDetail
-            labelField="publisher"
+            labelField="publisher:"
             valueField={bookData.fields.publisher}
           />
-          <BookDetail labelField="pages" valueField={bookData.fields.pages} />
-          <BookDetail labelField="year" valueField={bookData.fields.year} />
+          <BookDetail labelField="pages:" valueField={bookData.fields.pages} />
+          <BookDetail labelField="year:" valueField={bookData.fields.year} />
           <div
             style={{
               width: "100%",

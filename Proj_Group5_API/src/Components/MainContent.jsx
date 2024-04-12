@@ -17,6 +17,10 @@ const MainContent = () => {
         fetchData();
     }, []);
 
+    // const toBookShelf = () => {
+    //     <BookShelf />
+    // }
+
     return (
         <>
             <Box sx={{
@@ -34,6 +38,7 @@ const MainContent = () => {
                 <Box component="img" src={`${data && data.includes.Asset.map((entry) => (entry.fields.file.url))}`} alt="Description"
                     sx={{
                         maxWidth: '50%',
+                        borderRadius: '2rem',
                         marginRight: 2,
                         '@media (max-width: 768px)': {
                             width: '80%', // Increase the width to 80% for smaller screens
@@ -50,7 +55,7 @@ const MainContent = () => {
                     <Typography fontWeight="semibold" fontSize="1.5rem">{data && data.items.map((entry) => (entry.fields.description))} </Typography>
                 </Typography>
             </Box>
-            <button className='button'>Plunge into pages &nbsp;&nbsp;<FaArrowRight /></button>
+            <button className='button'><a href='/BookShelf'  >Plunge into pages &nbsp;&nbsp; </a><FaArrowRight /></button>
         </>
     );
 };

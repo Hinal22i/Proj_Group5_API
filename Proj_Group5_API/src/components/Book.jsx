@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
-const Book = ({ title, imageUrl, descriptionLink }) => {
+const Book = ({ key, title, imageUrl, descriptionLink }) => {
   return (
     <div className="book">
       <img src={imageUrl} alt={imageUrl} />

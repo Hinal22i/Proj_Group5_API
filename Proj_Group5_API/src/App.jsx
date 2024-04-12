@@ -1,20 +1,23 @@
 // import Navbar from "./Components/Navbar";
-// import MainContent from "./Components/MainContent";
+import MainContent from "./Components/MainContent";
 // import Category from "./Components/Category";
 // import Footer from "./Components/Footer";
 import BookItem from "./Components/BookItem";
-import BookShelf from "./components/BookShelf";
+import BookShelf from "./Components/BookShelf";
+import { Routes, Route } from 'react-router-dom';
+import MainLayout from "./Layouts/MainLayout";
 import "./App.css";
 
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
-      {/* <Category /> */}
-      {/* <MainContent /> */}
-      {/* <Footer /> */}
-      <BookItem />
-      {/* <BookShelf /> */}
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route path='/MainContent' element={<MainContent />} />
+          <Route path='/BookShelf' element={<BookShelf />} />
+          <Route path='/:bookID' element={<BookItem />} />
+        </Route>
+      </Routes>
     </>
   );
 }

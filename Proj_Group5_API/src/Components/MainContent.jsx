@@ -1,9 +1,15 @@
 import { Box, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { FaArrowRight } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 const MainContent = () => {
     const [data, setData] = useState();
+    const navigate = useNavigate();
+
+    const goSomewhere = () => {
+        navigate('/bookshelf')
+      }
 
     const url = 'https://cdn.contentful.com/spaces/tckbs3t41kd5/environments/master/entries?access_token=5YKbClc0mVuVulCYhjocUmsVQzg2av5fApTUsYtbw7I&content_type=landingPage';
 
@@ -55,7 +61,7 @@ const MainContent = () => {
                     <Typography fontWeight="semibold" fontSize="1.5rem">{data && data.items.map((entry) => (entry.fields.description))} </Typography>
                 </Typography>
             </Box>
-            <button className='button'><a href='/BookShelf'>Plunge into pages &nbsp;&nbsp; </a><FaArrowRight /></button>
+            <button className='button'><a onClick={goSomewhere}>Plunge into pages &nbsp;&nbsp; </a><FaArrowRight /></button>
         </>
     );
 };

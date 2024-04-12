@@ -13,7 +13,9 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route path='/MainContent' element={<MainContent />} />
+          <Route path='/' element={<MainContent />} />
+        </Route>
+        <Route path="/" element={<MainLayout />}>
           <Route path='/BookShelf' element={<BookShelf />} />
           <Route path='/:bookID' element={<BookItem />} />
         </Route>

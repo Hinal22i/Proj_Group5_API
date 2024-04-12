@@ -55,7 +55,7 @@ const MainContent = () => {
                     <Typography fontWeight="semibold" fontSize="1.5rem">{data && data.items.map((entry) => (entry.fields.description))} </Typography>
                 </Typography>
             </Box>
-            <button className='button'><a href='/BookShelf'  >Plunge into pages &nbsp;&nbsp; </a><FaArrowRight /></button>
+            <button className='button'><a href='/BookShelf'>Plunge into pages &nbsp;&nbsp; </a><FaArrowRight /></button>
         </>
     );
 };

@@ -3,7 +3,7 @@ import MainContent from "./Components/MainContent";
 // import Category from "./Components/Category";
 // import Footer from "./Components/Footer";
 import BookItem from "./Components/BookItem";
-import BookShelf from "./Components/BookShelf";
+import BookShelf from "./components/BookShelf";
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from "./Layouts/MainLayout";
 import "./App.css";

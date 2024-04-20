@@ -1,0 +1,103 @@
+{
+    "sys": {
+        "type": "Array"
+    },
+    "total": 1,
+    "skip": 0,
+    "limit": 100,
+    "items": [
+        {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "tckbs3t41kd5"
+                    }
+                },
+                "id": "5KQSNHSts9rQ2GQWGHI21d",
+                "type": "Entry",
+                "createdAt": "2024-04-04T15:27:47.042Z",
+                "updatedAt": "2024-04-04T15:27:47.042Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "revision": 1,
+                "contentType": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "landingPage"
+                    }
+                },
+                "locale": "en-US"
+            },
+            "fields": {
+                "landingPageImg": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Asset",
+                        "id": "1JAolBsjQOZDrgDE3Kk92t"
+                    }
+                },
+                "categoryCount": 20,
+                "BookCount": 50000,
+                "description": "\"Embark on a transformative journey with our curated collection of books. Explore life's mysteries, conquer challenges, and uncover the secrets to living life to the fullest. With diverse genres and compelling narratives, each page offers inspiration, wisdom, and the keys to unlocking your true potential. Dive into our library and embark on a voyage of self-discovery and personal growth. Your next adventure awaits!\""
+            }
+        }
+    ],
+    "includes": {
+        "Asset": [
+            {
+                "metadata": {
+                    "tags": []
+                },
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "tckbs3t41kd5"
+                        }
+                    },
+                    "id": "1JAolBsjQOZDrgDE3Kk92t",
+                    "type": "Asset",
+                    "createdAt": "2024-04-04T15:25:53.936Z",
+                    "updatedAt": "2024-04-04T15:25:53.936Z",
+                    "environment": {
+                        "sys": {
+                            "id": "master",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "revision": 1,
+                    "locale": "en-US"
+                },
+                "fields": {
+                    "title": "book",
+                    "description": "First_image_of_landingpage",
+                    "file": {
+                        "url": "//images.ctfassets.net/tckbs3t41kd5/1JAolBsjQOZDrgDE3Kk92t/aa2dbdaa8686ba447f5799c0228f3857/book.jpg",
+                        "details": {
+                            "size": 1758941,
+                            "image": {
+                                "width": 1600,
+                                "height": 1400
+                            }
+                        },
+                        "fileName": "book.jpg",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            }
+        ]
+    }
+}

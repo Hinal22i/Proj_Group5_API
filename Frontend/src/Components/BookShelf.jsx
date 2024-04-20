@@ -4,7 +4,7 @@ import Book from "./Book";
 let imageArray = [];
 
 const BookShelf = () => {
-  const bookID = "7n6j5Hplu38L1tlZDVGoMo";
+  // const bookID = "7n6j5Hplu38L1tlZDVGoMo";
   const [bookData, setBookData] = useState(null);
   // const [coverImage, setCoverImage] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -12,9 +12,10 @@ const BookShelf = () => {
 
   const getBookData = async () => {
     try {
-      let SPACE_ID = "tckbs3t41kd5";
-      let ACCESS_TOKEN = "5YKbClc0mVuVulCYhjocUmsVQzg2av5fApTUsYtbw7I";
-      let fetchURL = `https://cdn.contentful.com/spaces/${SPACE_ID}/environments/master/entries/?access_token=${ACCESS_TOKEN}&content_type=bookItem`;
+      // let SPACE_ID = "tckbs3t41kd5";
+      // let ACCESS_TOKEN = "5YKbClc0mVuVulCYhjocUmsVQzg2av5fApTUsYtbw7I";
+      // let fetchURL = `https://cdn.contentful.com/spaces/${SPACE_ID}/environments/master/entries/?access_token=${ACCESS_TOKEN}&content_type=bookItem`;
+      let fetchURL = `http://localhost:8000/entries`;
 
       const response = await fetch(fetchURL);
       if (!response.ok) {
@@ -30,12 +31,14 @@ const BookShelf = () => {
   };
   const fetchImages = async (bookData) => {
     try {
-      let SPACE_ID = "tckbs3t41kd5";
-      let ACCESS_TOKEN = "5YKbClc0mVuVulCYhjocUmsVQzg2av5fApTUsYtbw7I";
+      // let SPACE_ID = "tckbs3t41kd5";
+      // let ACCESS_TOKEN = "5YKbClc0mVuVulCYhjocUmsVQzg2av5fApTUsYtbw7I";
       imageArray = [];
       for (const book of bookData.items) {
+      // for (let i = 0; i < bookData.items.length; i++) {
         const assetID = book.fields.img.sys.id;
-        const imageFetchURL = `https://cdn.contentful.com/spaces/${SPACE_ID}/assets/${assetID}?access_token=${ACCESS_TOKEN}`;
+        console.log(assetID);
+        const imageFetchURL = `http://localhost:8000/asset/${assetID}`;
         const imageResponse = await fetch(imageFetchURL);
         const imageResult = await imageResponse.json();
         imageArray.push(`https:${imageResult.fields.file.url}`);
@@ -52,7 +55,7 @@ const BookShelf = () => {
     }
   };
   useEffect(() => {
-    getBookData(bookID);
+    getBookData();
   }, []);
 
   // if no data is here:
@@ -66,7 +69,7 @@ const BookShelf = () => {
         <Book
           key={book.fields.id}
           title={book.fields.title}
-          imageUrl={imageArray[index]}
+          imageUrl={bookData.includes.Asset[index].fields.file.url}
           descriptionLink={book.sys.id}
         />
       ))}

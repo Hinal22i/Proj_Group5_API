@@ -11,13 +11,17 @@ const MainContent = () => {
         navigate('/bookshelf')
       }
 
-    const url = 'https://cdn.contentful.com/spaces/tckbs3t41kd5/environments/master/entries?access_token=5YKbClc0mVuVulCYhjocUmsVQzg2av5fApTUsYtbw7I&content_type=landingPage';
+    // const url = 'https://cdn.contentful.com/spaces/tckbs3t41kd5/environments/master/entries?access_token=5YKbClc0mVuVulCYhjocUmsVQzg2av5fApTUsYtbw7I&content_type=landingPage';
+    const url = 'http://localhost:8000/landingpage';
 
     useEffect(() => {
         const fetchData = () => {
             fetch(url)
                 .then((response) => response.json())
-                .then((result) => setData(result))
+                .then((result) => {
+                setData(result);
+                console.log(result); 
+            })
                 .catch((error) => console.error(error));
         }
         fetchData();

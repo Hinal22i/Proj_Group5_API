@@ -1,11 +1,19 @@
 import express from 'express';
+import cors from 'cors';
 import fields from './fields.json' with {type: 'json'};
+import landingData from './landingPageData.json' with {type: 'json'};
 
 const app = express();
 const port = 8000;
 
+app.use(cors());
+
 app.get('/', (req, res) => {
     res.send("Hello there from send");
+});
+
+app.get('/landingpage', (req, res) => {    
+    res.send(landingData);
 });
 
 app.get('/entries', (req, res) => {    
